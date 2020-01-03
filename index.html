@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>index</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <style>
-        .box{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row-reverse;
-        }
-        .item{
-            width:50px;
-            border:1px solid #ddd;
-            background-color: red;
-            height: 50px;
-        }
+
     </style>
-    <div class="box">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+    <div>
+        <div class="hinge ani">
+            babadbabababababababa
+        </div>
+        <div class="box">
+            abc
+        </div>
+
+        <div class="add-reduce">
+            <div class="reduce aniNew">-</div>
+            <div class="add">+</div>
+        </div>
+        <style>
+            .add-reduce {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .add,
+            .reduce {
+                margin: 0 10px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 2px solid red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .reduce {
+                transform: rotate(0deg);
+            }
+
+            .aniNew {
+                transform: rotate(180deg) translateX(10px);
+                transition: all 1s;
+            }
+        </style>
+        <script>
+            document.addEventListener('click', function () {
+                var reduce = document.querySelector('.reduce');
+                reduce.classList.add('aniNew')
+            })
+        </script>
+
+
+        </style>
+        <div class="stage">
+            <div id="container" class="container"><img id="piece1"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm1.jpg" class="piece"
+                    style="transform: rotateY(0deg) translateZ(195.839px);"><img id="piece8"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm8.jpg" class="piece"
+                    style="transform: rotateY(40deg) translateZ(195.839px);"><img id="piece3"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm3.jpg" class="piece"
+                    style="transform: rotateY(80deg) translateZ(195.839px);"><img id="piece4"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm4.jpg" class="piece"
+                    style="transform: rotateY(120deg) translateZ(195.839px);"><img id="piece6"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm6.jpg" class="piece"
+                    style="transform: rotateY(160deg) translateZ(195.839px);"><img id="piece7"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm7.jpg" class="piece"
+                    style="transform: rotateY(200deg) translateZ(195.839px);"><img id="piece10"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm10.jpg" class="piece"
+                    style="transform: rotateY(240deg) translateZ(195.839px);"><img id="piece13"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm13.jpg" class="piece"
+                    style="transform: rotateY(280deg) translateZ(195.839px);"><img id="piece15"
+                    src="http://image.zhangxinxu.com/image/study/s/s128/mm15.jpg" class="piece"
+                    style="transform: rotateY(320deg) translateZ(195.839px);"></div>
+        </div>
+
     </div>
 </body>
+
 </html>
