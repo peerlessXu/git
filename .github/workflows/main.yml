@@ -14,5 +14,5 @@ jobs:
         
       - name: Simulate an error
         env: 
-          xname: ${{ github.workspace }}
+          xname: ${{ toJSON(workspace) }}
         run: echo '$xname' !!!
