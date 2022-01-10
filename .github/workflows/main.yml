@@ -13,4 +13,4 @@ jobs:
         run: echo "Hello, world! xyfei!"
         
       - name: Simulate an error
-        run: echo "About to fail" ; exit 1
+        run: echo  ${{ github.workspace }}!
