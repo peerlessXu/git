@@ -15,4 +15,4 @@ jobs:
       - name: Simulate an error
         env: 
           xname: ${{ toJSON(steps) }}
-        run: echo "$xname" !!!
+        run: echo $xname !!!
