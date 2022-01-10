@@ -13,4 +13,6 @@ jobs:
         run: echo "Hello, world! xyfei!"
         
       - name: Simulate an error
-        run: echo  ${{ github.workspace }}!
+        env: 
+          xname: ${{ github.workspace }}
+        run: echo '$xname' !!!
