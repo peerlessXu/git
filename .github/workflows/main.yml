@@ -16,7 +16,7 @@ jobs:
         env: 
           xname: ${{ toJSON(steps) }}
         run: echo $xname !!!
-        
+
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
@@ -24,4 +24,6 @@ jobs:
           username: 'root'
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: whoami
+          script: |
+            whoami
+            ll
