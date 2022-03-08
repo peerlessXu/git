@@ -8,6 +8,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: t1
 
       - name: Run a one-line script
         run: echo "Hello, world! xyfei!"
@@ -25,5 +27,5 @@ jobs:
           SOURCE: "/"
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: root
-          TARGET: "/home/temp/"
+          TARGET: "/root/temp/githubaction"
           EXCLUDE: "/dist/, /node_modules/,/css/"
