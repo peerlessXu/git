@@ -18,12 +18,12 @@ jobs:
         run: echo $xname !!!
 
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@master
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "/"
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: root
-          TARGET: "/home/temp/REMOTE_USER/"
+          TARGET: "/home/temp/"
           EXCLUDE: "/dist/, /node_modules/,/css/"
